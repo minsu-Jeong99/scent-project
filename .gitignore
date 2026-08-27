@@ -41,3 +41,6 @@ mcp-shrimp-task-manager/
 .claude/
 .mcp.json
 shrimp-rules.md
+
+# Playwright MCP
+.playwright-mcp/
