@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (pageTitle) pageTitle.textContent = product;
 
+  const breadcrumb = document.getElementById("breadcrumb");
+  if (breadcrumb) {
+    breadcrumb.innerHTML = `<a href="/">홈</a>`;
+  }
+
   ScentApp.updateSortButton(sortButton, sortOrder);
   sortButton.addEventListener("click", () => {
     sortOrder = sortOrder === "asc" ? "desc" : "asc";
