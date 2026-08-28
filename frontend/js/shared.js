@@ -99,10 +99,12 @@
         ? `<img src="${item.image}" alt="${title}" class="product-card__image">`
         : `<div class="product-card__no-image">No Image</div>`;
 
+      const ctaLabel = item.mallName ? `${item.mallName}에서 보기 →` : "상품 보기 →";
+
       card.innerHTML = `
         <div class="product-card__media">
           ${mediaHtml}
-          <a href="${item.link || "#"}" target="_blank" rel="noopener noreferrer" class="product-card__cta">네이버에서 보기 →</a>
+          <a href="${item.link || "#"}" target="_blank" rel="noopener noreferrer" class="product-card__cta">${ctaLabel}</a>
         </div>
         <div class="product-card__body">
           ${item.mallName ? `<span class="product-card__mall">${item.mallName}</span>` : ""}
